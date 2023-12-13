@@ -16,16 +16,14 @@ public class SalespersonSalary {
 		while(true) {
 			System.out.print("Enter sales in dollars (or -1 to end) : ");
 			sales = scn.nextInt();
-			if(sales > 0) {
-				salary = sales * COMMISSION_RATE + 1000;	
-				System.out.println("Salary is : " + frm.format(salary));
-				System.out.println();
-			}
-			else {
-				System.out.print("bye");
+			if(sales == SENTINEL) {
 				break;
 			}
+			salary = sales * COMMISSION_RATE + 1000;	
+			System.out.println("Salary is : " + frm.format(salary));
+			System.out.println();
 		}
+			System.out.print("bye");
 
 		
 		
